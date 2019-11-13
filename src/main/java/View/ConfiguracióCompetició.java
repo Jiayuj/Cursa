@@ -1,10 +1,6 @@
 package View;
 
 import View.Menu;
-import datos.Campionat;
-import datos.Jugador;
-
-import java.util.Scanner;
 
 public class ConfiguracióCompetició {
 

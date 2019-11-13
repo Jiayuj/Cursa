@@ -1,4 +1,4 @@
-package datos;
+package Manager;
 
 public class Partidas {
 

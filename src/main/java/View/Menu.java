@@ -13,7 +13,7 @@ public class Menu {
         System.out.println("--------------------------------------------");
         return sr.nextInt();
     }
-    int menuconfiguracion(){
+    public int menuconfiguracion(){
         System.out.println("--------------------------------------------");
         System.out.println("1- Nom de jugador");
         System.out.println("2- qtat de participants");
@@ -22,7 +22,7 @@ public class Menu {
         System.out.println("--------------------------------------------");
         return  sr.nextInt();
     }
-    String trialvehicle(){
+    public String trialvehicle(){
         System.out.println("--------------------------------------------");
         System.out.println("1- bicicleta");
         System.out.println("2- cotxe");

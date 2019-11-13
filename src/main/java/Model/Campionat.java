@@ -1,4 +1,4 @@
-package datos;
+package Model;
 
 public class Campionat {
     private static int qtatdeparticipants;

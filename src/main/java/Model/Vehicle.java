@@ -1,4 +1,4 @@
-package datos;
+package Model;
 
 public class Vehicle {
     String tipo;

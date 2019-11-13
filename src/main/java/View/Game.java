@@ -1,10 +1,8 @@
 package View;
 
-import View.ConfiguracióCompetició;
-import View.Menu;
-import View.Play;
-import datos.Campionat;
-import datos.Jugador;
+import Manager.Play;
+import Model.Campionat;
+import Model.Jugador;
 
 import java.util.Scanner;
 
@@ -16,7 +14,7 @@ public class Game {
 
     public void start(){
         System.out.print("Nom de jugador: ");
-        jugador.setNom(sr.nextLine());
+        jugador.setNomjugador(sr.nextLine());
         System.out.print("qtat de participants: ");
         campionat.setQtatdeparticipants(sr.nextInt());
         System.out.print("qtat de circuits del campionat: ");
