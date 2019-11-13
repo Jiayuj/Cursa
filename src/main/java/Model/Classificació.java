@@ -7,7 +7,7 @@ public class Classificació implements Comparable<Classificació> {
 
     private String nom;
     private double time;
-    private int punt;
+    private int punt = 0;
 
     public Classificació(String nom, double time, int punt) {
         this.nom = nom;
@@ -27,7 +27,7 @@ public class Classificació implements Comparable<Classificació> {
         return time;
     }
 
-    public void setTime(Float time) {
+    public void setTime(double time) {
         this.time = time;
     }
 

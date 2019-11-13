@@ -8,10 +8,9 @@ import View.Menu;
 public class Play {
     Vehicle vehicle = new Vehicle();
     Campionat campionat = new Campionat();
+    Circuit c = new Circuit();
     int circuit;
     int participant;
-
-
 
     public void play(){
         vehicle.setTipo(new Menu().trialvehicle());
@@ -19,7 +18,7 @@ public class Play {
         participant= campionat.getQtatdeparticipants();
         for (int i = 0; i < circuit; i++) {
             System.out.println("Circuit "+(i+1));
-            new Circuit().star(participant,new Jugador().getNomjugador());
+            c.star(participant);
         }
 
 
