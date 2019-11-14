@@ -52,7 +52,7 @@ public class Classificació implements Comparable<Classificació> {
     public int compareTo(Classificació o) {
         Double obj1 = o.time;
         Double obj2 = this.time;
-        int retval =  obj1.compareTo(obj2);
+        int retval =  obj2.compareTo(obj1);
         return retval;
     }
     @Override

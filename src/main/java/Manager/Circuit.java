@@ -32,7 +32,10 @@ public class Circuit {
                         spunt += punt;
                         c.setPunt(spunt);
                         listtime.set(i,c);
-                        listtimeC.set(j,c);
+                        double stime = listtimeC.get(j).getTime();
+                        double time = c.getTime();
+                        stime += time;
+                        listtimeC.set(j,new Classificació(c.getNom(),stime,spunt));
                     }
                 }
             }else {
@@ -46,9 +49,9 @@ public class Circuit {
         }
         System.out.println(listtime);
         listtime.clear();
-        System.out.println(listtimeC);
-
-
     }
 
+    public List<Classificació> getListtimeC() {
+        return listtimeC;
+    }
 }
