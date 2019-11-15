@@ -42,7 +42,7 @@ public class Classificació implements Comparable<Classificació> {
     @Override
     public String toString() {
         return
-                "nom='" + nom + '\'' +
+                " nom='" + nom + '\'' +
                 ", time=" + time +
                 ", punt=" + punt +"\n";
     }

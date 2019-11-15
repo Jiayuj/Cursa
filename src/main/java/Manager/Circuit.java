@@ -16,10 +16,10 @@ public class Circuit {
     Random random = new Random();
 
 
-    public void star(int quatitatparticipants){
-        listtime.add(new Classificació(new Jugador().getNomjugador(),random.nextDouble()*(14.99 - 12.99)+12.99,0));
+    public void star(int quatitatparticipants,double max, double min){
+        listtime.add(new Classificació(new Jugador().getNomjugador(),random.nextDouble()*(max - min)+min,0));
         for (int i = 1; i <quatitatparticipants ; i++) {
-            listtime.add(new Classificació("Jugador"+(i+1),random.nextDouble()*(14.99 - 12.99)+12.99,0));
+            listtime.add(new Classificació("Jugador"+(i+1),random.nextDouble()*(max - min)+min,0));
         }
         Collections.sort(listtime);
         int punt = 10;
@@ -44,7 +44,9 @@ public class Circuit {
                 c.setPunt(spunt);
                 listtimeC.add(i,c);
             }
-            punt-=2;
+            if (punt != 0){
+                punt-=2;
+            }
             i++;
         }
         System.out.println(listtime);

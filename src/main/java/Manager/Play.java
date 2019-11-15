@@ -2,9 +2,7 @@ package Manager;
 
 import Model.Campionat;
 import Model.Classificació;
-import Model.Jugador;
 import Model.Vehicle;
-import View.Menu;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,23 +12,26 @@ public class Play {
     Vehicle vehicle = new Vehicle();
     Campionat campionat = new Campionat();
     Circuit c = new Circuit();
+    List<Classificació> result = new ArrayList<>();
     List<Classificació> listtimeC = new ArrayList<>();
-    int circuit;
-    int participant;
 
-    public void play(){
-        vehicle.setTipo(new Menu().trialvehicle());
-        circuit= campionat.getQtatdecircuitsdelcampionat();
-        participant= campionat.getQtatdeparticipants();
-        for (int i = 0; i < circuit; i++) {
-            System.out.println("Circuit "+(i+1));
-            c.star(participant);
+
+    public List<Classificació> play() {
+        String tipo = vehicle.setTipo();
+        System.out.println("Welcome championship " + tipo);
+
+        for (int i = 0; i < campionat.getQtatdecircuitsdelcampionat(); i++) {
+            System.out.println("Circuit " + (i + 1));
+            c.star(campionat.getQtatdeparticipants(), vehicle.getVelocidadMax(), vehicle.getVelocidadMin());
         }
         System.out.println("resulta final: ");
         listtimeC = c.getListtimeC();
         Collections.sort(listtimeC);
         System.out.println(listtimeC);
 
-
+        for (Classificació c : listtimeC) {
+            result.add(new Classificació(c.getNom(), c.getTime(), c.getPunt()));
+        }
+        return result;
     }
 }

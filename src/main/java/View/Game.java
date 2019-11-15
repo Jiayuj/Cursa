@@ -1,43 +1,36 @@
 package View;
 
 import Manager.Play;
-import Model.Campionat;
-import Model.Jugador;
+import Model.Classificació;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Game {
     Menu menu = new Menu();
-    Scanner sr = new Scanner(System.in);
-    Campionat campionat = new Campionat();
-    Jugador jugador = new Jugador();
+    List<Classificació> result = new ArrayList<>();
 
     public void start(){
-        System.out.print("Nom de jugador: ");
-        jugador.setNomjugador(sr.nextLine());
-        System.out.print("qtat de participants: ");
-        campionat.setQtatdeparticipants(sr.nextInt());
-        System.out.print("qtat de circuits del campionat: ");
-        campionat.setQtatdecircuitsdelcampionat(sr.nextInt());
 
         int opcion = menu.menu();
 
         switch (opcion){
             case 1:
-                new Play().play();
-
+                result.add((Classificació) new Play().play());
+                start();
                 break;
             case 2:
                 new ConfiguracióCompetició().confi();
                 break;
             case 3:
-
+                System.out.println(result);
                 break;
             case 4:
 
                 break;
             default:
                 System.out.println("error opcion");
+                start();
         }
 
     }
