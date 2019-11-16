@@ -55,6 +55,7 @@ public class Classificació implements Comparable<Classificació> {
         int retval =  obj2.compareTo(obj1);
         return retval;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

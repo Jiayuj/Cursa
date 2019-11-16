@@ -26,6 +26,9 @@ public class ConfiguracióCompetició {
                 System.out.print("qtat de circuits del campionat: ");
                 campionat.setQtatdecircuitsdelcampionat(sr.nextInt());
                 break;
+            case 4:
+                new Game().start();
+                break;
             default:
                 System.out.println("error opcion");
                 confi();

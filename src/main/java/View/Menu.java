@@ -44,6 +44,9 @@ public class Menu {
             case 4:
                 r="moto";
                 break;
+            default:
+                System.out.println("Opcion error");
+                trialvehicle();
         }
         return r;
     }
