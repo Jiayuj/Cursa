@@ -1,7 +1,5 @@
 package Model;
 
-import java.util.Objects;
-
 public class Classificació implements Comparable<Classificació> {
 
 
@@ -50,22 +48,11 @@ public class Classificació implements Comparable<Classificació> {
 
     @Override
     public int compareTo(Classificació o) {
-        Double obj1 = o.time;
-        Double obj2 = this.time;
-        int retval =  obj2.compareTo(obj1);
-        return retval;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Classificació classificació = (Classificació) o;
-        return time == classificació.time;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(time);
+        if(o.getTime()==this.time)
+            return 0;
+        else if(o.getTime()<this.time)
+            return 1;
+        else
+            return -1;
     }
 }

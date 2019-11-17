@@ -6,7 +6,7 @@ import View.Menu;
 
 import java.util.Scanner;
 
-public class ConfiguracióCompetició {
+public class ConfiguracióCompetició extends Game {
     Jugador jugador = new Jugador();
     Campionat campionat = new Campionat();
 
@@ -27,13 +27,13 @@ public class ConfiguracióCompetició {
                 campionat.setQtatdecircuitsdelcampionat(sr.nextInt());
                 break;
             case 4:
-                new Game().start();
+                start();
                 break;
             default:
                 System.out.println("error opcion");
                 confi();
         }
-        new Game().start();
+        start();
     }
 
 }

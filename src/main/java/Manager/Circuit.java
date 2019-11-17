@@ -49,11 +49,19 @@ public class Circuit {
             }
             i++;
         }
-        System.out.println(listtime);
+        for (Classificació classificació : listtime){
+            System.out.format("Nom: %10s  Tiempo: %.2f  Punto: %d \n",classificació.getNom(),classificació.getTime(),classificació.getPunt());
+        }
         listtime.clear();
     }
 
     public List<Classificació> getListtimeC() {
+        ResultCompara resultCompara = new ResultCompara();
+        Collections.sort(listtimeC,resultCompara);
+        System.out.println("resulta final: ");
+        for (Classificació classificació : listtimeC){
+            System.out.format("Nom: %10s  Tiempo: %.2f  Punto: %d \n",classificació.getNom(),classificació.getTime(),classificació.getPunt());
+        }
         return listtimeC;
     }
 }
