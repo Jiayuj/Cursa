@@ -41,6 +41,8 @@ public class Game {
                 start();
                 break;
             case 4:
+                System.out.println("bye");
+                System.exit(0);
                 break;
             default:
                 System.out.println("error opcion");
